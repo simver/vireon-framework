@@ -1,0 +1,2 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+com.simxe.vireon.observability.autoconfigure.VireonObservabilityEnvironmentPostProcessor

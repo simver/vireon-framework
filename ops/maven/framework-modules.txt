@@ -1,0 +1,9 @@
+build/vireon-parent
+modules/vireon-core
+modules/vireon-web
+modules/vireon-security
+modules/vireon-observability
+modules/vireon-test-support
+modules/vireon-openapi
+modules/vireon-openapi-build
+starters/vireon-starter-service
