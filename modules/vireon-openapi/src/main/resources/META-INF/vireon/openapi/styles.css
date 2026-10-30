@@ -1,0 +1,55 @@
+:root { color-scheme: light dark; }
+.vireon-review { margin: 3.5rem auto 5rem; padding: clamp(1.25rem, 3vw, 2rem); border: 1px solid var(--scalar-border-color); border-radius: var(--scalar-radius-lg, .75rem); background: var(--scalar-background-1); color: var(--scalar-color-1); }
+.vireon-review-header { max-width: 50rem; }
+.vireon-review-header h2 { margin: .2rem 0 .55rem; font-size: clamp(1.55rem, 3vw, 2.15rem); letter-spacing: -.025em; }
+.vireon-review-header > p:last-child { margin: 0; color: var(--scalar-color-2); line-height: 1.7; }
+.vireon-review-kicker { margin: 0; color: var(--scalar-color-blue); font-family: var(--scalar-font-code); font-size: .7rem; font-weight: 700; letter-spacing: .14em; }
+.vireon-review-tabs { display: flex; flex-wrap: wrap; gap: .35rem; margin: 1.6rem 0 1rem; border-bottom: 1px solid var(--scalar-border-color); }
+.vireon-review-tabs button { margin-bottom: -1px; padding: .65rem .75rem; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--scalar-color-2); cursor: pointer; font-weight: 600; }
+.vireon-review-tabs button:hover { color: var(--scalar-color-1); }
+.vireon-review-tabs button.is-active { border-bottom-color: var(--scalar-color-blue); color: var(--scalar-color-1); }
+.vireon-review-tabs button:focus-visible, .vireon-review-search input:focus-visible { outline: 2px solid var(--scalar-color-blue); outline-offset: 2px; }
+.vireon-review-search { display: grid; gap: .35rem; max-width: 38rem; color: var(--scalar-color-2); font-size: .75rem; font-weight: 600; }
+.vireon-review-search input { width: 100%; padding: .72rem .85rem; border: 1px solid var(--scalar-border-color); border-radius: var(--scalar-radius-md, .4rem); background: var(--scalar-background-1); color: var(--scalar-color-1); font: inherit; font-size: .9rem; font-weight: 400; }
+.vireon-review-content { margin-top: 1.15rem; }
+.vireon-review-overview, .vireon-review-data, .vireon-review-list { display: grid; gap: .75rem; }
+.vireon-review-metrics { display: grid; grid-template-columns: repeat(5, minmax(7rem, 1fr)); gap: .55rem; }
+.vireon-review-metric { display: grid; gap: .2rem; padding: 1rem; border: 1px solid var(--scalar-border-color); background: var(--scalar-background-2); }
+.vireon-review-metric strong { font-family: var(--scalar-font-code); font-size: 1.6rem; font-variant-numeric: tabular-nums; }
+.vireon-review-metric span, .vireon-review-meta, .vireon-review-disclosure { color: var(--scalar-color-2); font-size: .78rem; }
+.vireon-review-provenance { display: grid; gap: 0; margin: .35rem 0 0; border-top: 1px solid var(--scalar-border-color); }
+.vireon-review-provenance div { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1rem; padding: .65rem 0; border-bottom: 1px solid var(--scalar-border-color); }
+.vireon-review-provenance dt { color: var(--scalar-color-2); }
+.vireon-review-provenance dd { min-width: 0; margin: 0; overflow-wrap: anywhere; }
+.vireon-review-card { display: grid; gap: .55rem; padding: 1rem 1.1rem; border: 1px solid var(--scalar-border-color); border-left: 3px solid var(--scalar-color-blue); border-radius: var(--scalar-radius-md, .4rem); background: var(--scalar-background-1); }
+.vireon-review-card h3, .vireon-review-card p { margin: 0; }
+.vireon-review-card h3 { display: flex; flex-wrap: wrap; gap: .65rem; align-items: baseline; font-size: 1rem; }
+.vireon-review-card h3 span { color: var(--scalar-color-2); font-size: .82rem; font-weight: 400; }
+.vireon-review-card-title { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; }
+.vireon-review-method { padding: .18rem .42rem; border-radius: var(--scalar-radius-sm, .25rem); background: var(--scalar-background-accent); color: var(--scalar-color-blue); font-family: var(--scalar-font-code); font-size: .72rem; font-weight: 700; }
+.vireon-review-disclosure { margin-top: .15rem !important; padding-top: .55rem; border-top: 1px dashed var(--scalar-border-color); }
+.vireon-review-table-wrap { overflow-x: auto; }
+.vireon-review table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+.vireon-review th, .vireon-review td { padding: .55rem .65rem; border-bottom: 1px solid var(--scalar-border-color); text-align: left; vertical-align: top; }
+.vireon-review th { color: var(--scalar-color-2); font-size: .72rem; font-weight: 600; }
+.vireon-review-indexes { display: flex; flex-wrap: wrap; gap: .45rem; margin: .25rem 0 0; padding: 0; list-style: none; }
+.vireon-review-indexes li { padding: .4rem .55rem; background: var(--scalar-background-2); color: var(--scalar-color-2); font-size: .75rem; }
+.vireon-review-relations { display: grid; gap: .5rem; margin-top: .4rem; padding: 1rem; border: 1px solid var(--scalar-border-color); }
+.vireon-review-relations > h3 { margin: 0 0 .2rem; font-size: .95rem; }
+.vireon-review-relation { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: .65rem; align-items: center; padding: .7rem 0; border-top: 1px solid var(--scalar-border-color); }
+.vireon-review-relation > span { color: var(--scalar-color-blue); font-size: 1.15rem; }
+.vireon-review-relation p { grid-column: 1 / -1; margin: 0; color: var(--scalar-color-2); font-size: .8rem; }
+.vireon-review-permission, .vireon-review-note { grid-template-columns: minmax(10rem, .35fr) minmax(0, 1fr); align-items: baseline; }
+.vireon-review-error { padding: .85rem 1rem; border-left: 3px solid var(--scalar-color-red); background: var(--scalar-background-danger); }
+.vireon-review-empty, .vireon-review-status { padding: 1rem; border: 1px dashed var(--scalar-border-color); color: var(--scalar-color-2); }
+@container narrow-references-container (width > 900px) {
+  body[data-layout="balanced"] #app .scalar-api-reference .operation-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  body[data-layout="request-focused"] #app .scalar-api-reference .operation-layout,
+  body[data-layout="request-expanded"] #app .scalar-api-reference .operation-layout { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+}
+@container narrow-references-container (width > 1440px) {
+  body[data-layout="request-expanded"] #app .scalar-api-reference .operation-layout { grid-template-columns: minmax(360px, 3fr) minmax(0, 7fr); }
+}
+@media (max-width: 900px) { .vireon-review-metrics { grid-template-columns: repeat(2, minmax(7rem, 1fr)); } .vireon-review-permission, .vireon-review-note { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .vireon-review { padding: 1rem; } .vireon-review-metrics { grid-template-columns: 1fr; } .vireon-review-relation { grid-template-columns: 1fr; } .vireon-review-relation > span { transform: rotate(90deg); justify-self: start; } }
+@media (prefers-reduced-motion: reduce) { .vireon-review *, .vireon-review *::before, .vireon-review *::after { scroll-behavior: auto !important; transition: none !important; } }

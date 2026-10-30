@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.simxe.vireon</groupId>
+    <artifactId>vireon-parent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <relativePath/>
+  </parent>
+
+  <artifactId>vireon-isolated-consumer</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Vireon Isolated Consumer</name>
+
+  <properties>
+    <maven.deploy.skip>true</maven.deploy.skip>
+    <!-- 消费契约须在缺少 Java 参数名元数据时仍成立；不改变 Framework 的默认编译设置。 -->
+    <maven.compiler.parameters>false</maven.compiler.parameters>
+  </properties>
+
+  <dependencies>
+    <dependency><groupId>com.simxe.vireon</groupId><artifactId>vireon-openapi</artifactId></dependency>
+    <dependency><groupId>com.simxe.vireon</groupId><artifactId>vireon-openapi-build</artifactId><scope>test</scope></dependency>
+    <dependency>
+      <groupId>com.simxe.vireon</groupId>
+      <artifactId>vireon-starter-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.simxe.vireon</groupId>
+      <artifactId>vireon-test-support</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <!-- Boot Parent 显式配置 parameters=true，必须在夹具插件配置中覆盖。 -->
+          <parameters>${maven.compiler.parameters}</parameters>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
